@@ -5,15 +5,15 @@
   "type": "module",
   "homepage": "https://abhikachhadiya.github.io/Abhi_kachhadiya",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "format": "prettier -uw --ignore-path .gitignore ./src",
     "type-check": "tsc",
     "lint": "eslint --cache --fix --ignore-path .gitignore --ext .ts,.tsx src",
-    "prepare": "husky install",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
