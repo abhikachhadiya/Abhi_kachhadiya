@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://abhikachhadiya.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,7 +11,9 @@
     "format": "prettier -uw --ignore-path .gitignore ./src",
     "type-check": "tsc",
     "lint": "eslint --cache --fix --ignore-path .gitignore --ext .ts,.tsx src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
@@ -32,6 +35,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.0",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "husky": "^7.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
